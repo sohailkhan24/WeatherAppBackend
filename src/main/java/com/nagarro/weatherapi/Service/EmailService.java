@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
 
 import com.nagarro.weatherapi.Model.Weather;
 import com.nagarro.weatherapi.Values.Values;
 
+@Service
 public class EmailService {
 	
 	@Autowired
@@ -19,7 +21,7 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 	
-	@Scheduled(cron = "0 0 10 * * ?")
+	@Scheduled(cron = "0 15 11 * * ?")
 	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
 	// week] [Year]")
 	// Send Periodic Mails
