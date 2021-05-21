@@ -37,13 +37,12 @@ public class WeatherController {
 		return "Api working";
 	}
 	
-//	@Scheduled(cron = "0 25 22 * * ?")
+	@Scheduled(cron = "0 58 22 * * ?")
 	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
 	// week] [Year]")
 	@RequestMapping(value = "/mail", method = RequestMethod.GET)
 	public void sendMail() {
 		EmailService.sendPeriodicEmail();
-		
 	}
 
 }
