@@ -21,7 +21,7 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 
-//	@Scheduled(cron = "0 25 19 * * ?")
+	@Scheduled(cron = "0 25 22 * * ?")
 //	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
 //	// week] [Year]")
 //	// Send Periodic Mails
