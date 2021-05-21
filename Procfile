@@ -1,1 +1,1 @@
-web:java -Dserver.port=$PORT -jar target/weatherapi-0.0.1-SNAPSHOT.war
+web: java -jar target/myapp-1.0.0.jar
