@@ -37,7 +37,7 @@ public class WeatherController {
 		return "Api working";
 	}
 	
-	@Scheduled(cron = "0 50 19 * * ?")
+	@Scheduled(cron = "0 25 20 * * ?")
 	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
 	// week] [Year]")
 	public void sendMail() {
