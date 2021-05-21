@@ -21,10 +21,10 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 
-	@Scheduled(cron = "0 25 19 * * ?")
-	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
-	// week] [Year]")
-	// Send Periodic Mails
+//	@Scheduled(cron = "0 25 19 * * ?")
+//	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
+//	// week] [Year]")
+//	// Send Periodic Mails
 	public void sendPeriodicEmail() {
 		Map<String, String> userData = new LinkedHashMap<>();
 		userData.put("sohail.khan@nagarro.com", "Amritsar");
@@ -44,6 +44,7 @@ public class EmailService {
 		SimpleMailMessage message = new SimpleMailMessage();
 		System.out.println("From email sent");
 		message.setTo(email);
+		
 		message.setSubject("Daily  Weather Report");
 		message.setText("You have registered for the daily Weather Report@10am IST." + "\r\n\n" + "Today's" + " (Date: "
 				+ date + " ) weather report=> " + "\r\n\n" + "City:   " + city + "\r\n" + "Weather Description:   "
