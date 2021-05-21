@@ -29,7 +29,7 @@ public class WeatherController {
 	}
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String test() {
-		return "Hello World";
+		return "Api working";
 	}
 
 }
