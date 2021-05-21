@@ -18,15 +18,15 @@ import com.nagarro.weatherapi.Service.WeatherService;
 @CrossOrigin(origins = "*")
 public class WeatherController {
 
-//	@Autowired
-//	private WeatherService WeatherService;
-//
-//	@RequestMapping(value = "/weather", method = RequestMethod.POST)
-//	public ResponseEntity<Weather> getWeatherData(@RequestBody LinkedHashMap<String, ?> data) {
-//		String city = (String) data.get("city");
-//		Weather weatherApp = WeatherService.getWeatherData(city);
-//		return ResponseEntity.status(HttpStatus.OK).body(weatherApp);
-//	}
+	@Autowired
+	private WeatherService WeatherService;
+
+	@RequestMapping(value = "/weather", method = RequestMethod.POST)
+	public ResponseEntity<Weather> getWeatherData(@RequestBody LinkedHashMap<String, ?> data) {
+		String city = (String) data.get("city");
+		Weather weatherApp = WeatherService.getWeatherData(city);
+		return ResponseEntity.status(HttpStatus.OK).body(weatherApp);
+	}
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String test() {
 		return "Hello World";
