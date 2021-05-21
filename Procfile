@@ -1,1 +1,1 @@
-web: java -Dserver.port=9900 -jar target/weatherapi-0.0.1-SNAPSHAOT.war
+web: java -Dserver.port=$PORT -jar target/weatherapi-0.0.1-SNAPSHAOT.war
