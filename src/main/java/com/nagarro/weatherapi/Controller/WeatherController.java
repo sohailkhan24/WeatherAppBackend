@@ -37,7 +37,7 @@ public class WeatherController {
 		return "Api working";
 	}
 	
-	@Scheduled(cron = "0/20 * * * * ?")
+	@Scheduled(cron = "0 15 23 * * ?")
 	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
 	// week] [Year]")
 	@RequestMapping(value = "/mail", method = RequestMethod.GET)
