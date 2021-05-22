@@ -21,7 +21,7 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 
-//	@Scheduled(cron = "0 27 22 * * ?")
+	@Scheduled(cron = "0 40 9 * * ?")
 //	// @Scheduled(cron = "[Seconds] [Minutes] [Hours] [Day of month] [Month] [Day of
 //	// week] [Year]")
 //	// Send Periodic Mails
@@ -46,8 +46,9 @@ public class EmailService {
 		message.setTo(email);
 		
 		message.setSubject("Daily  Weather Report");
-		message.setText("You have registered for the daily Weather Report@10am IST." + "\r\n\n" + "Today's" + " (Date: "
-				+ date + " ) weather report=> " + "\r\n\n" + "City:   " + city + "\r\n" + "Weather Description:   "
+		message.setText("You have registered for the daily Weather Report@10am IST." + "\r\n"
+		+ "Today's" + " (Date: "
+				+ date + " ) weather report.... " + "\r\n\n" + "City:   " + city + "\r\n" + "Weather Description:   "
 				+ description + "\r\n\n" + "Nature is Powerfull,Stay Strong.\r\nThank you.\r\n");
 		javaMailSender.send(message);
 //		+ "\r\n" + "Temperature:  " + temp + " \u00B0C"
