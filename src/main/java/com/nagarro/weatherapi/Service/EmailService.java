@@ -34,7 +34,7 @@ public class EmailService {
 			Weather weatherData = WeatherService.getWeatherData(city);
 			System.out.println("From email sent jhkjjgjlkh");
 			sendEmail(email, Values.date, city, weatherData.getDescription());
-			
+
 		}
 
 	}
@@ -44,10 +44,8 @@ public class EmailService {
 		SimpleMailMessage message = new SimpleMailMessage();
 		System.out.println("From email sent");
 		message.setTo(email);
-		
 		message.setSubject("Daily  Weather Report");
-		message.setText("You have registered for the daily Weather Report@10am IST." + "\r\n"
-		+ "Today's" + " (Date: "
+		message.setText("You have registered for the daily Weather Report@10am IST." + "\r\n" + "Today's" + " (Date: "
 				+ date + " ) weather report.... " + "\r\n\n" + "City:   " + city + "\r\n" + "Weather Description:   "
 				+ description + "\r\n\n" + "Nature is Powerfull,Stay Strong.\r\nThank you.\r\n");
 		javaMailSender.send(message);
