@@ -55,6 +55,5 @@ public class Weather {
 		return "Weather [longitude=" + longitude + ", latitude=" + latitude + ", description=" + description + ", city="
 				+ city + "]";
 	}
-	
 
 }

@@ -29,6 +29,7 @@ public class EmailService {
 		Map<String, String> userData = new LinkedHashMap<>();
 		userData.put("sohail.khan@nagarro.com", "Amritsar");
 		userData.put("kaushal.singh@nagarro.com", "Gurgaon");
+		
 		for (String email : userData.keySet()) {
 			String city = userData.get(email);
 			Weather weatherData = WeatherService.getWeatherData(city);

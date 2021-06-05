@@ -18,7 +18,7 @@ public class WeatherService {
 		RestTemplate restTemplate = new RestTemplate();
 
 		// Storing data in LinkedHashMap (data)
-		LinkedHashMap<String, Object> data = (LinkedHashMap<String,Object>) restTemplate
+		LinkedHashMap<String, Object> data = (LinkedHashMap<String, Object>) restTemplate
 				.getForObject(Values.url + "?q=" + cityInp + "&appid=" + Values.appId, Object.class);
 
 		// Getting the data that is required for the functionality
@@ -36,11 +36,9 @@ public class WeatherService {
 		// Your City
 		String city = (String) data.get("name");
 
-//		 Temperature
-		LinkedHashMap<String, Object> main = (LinkedHashMap<String, Object>) data.get("main");
-		double temp = (double) main.get("temp") - 273.15;
 
-//		Save Data in dataBase
+
+//		Save Data 
 		Weather weatherApp = new Weather(longitude, latitude, description, city);
 
 		return weatherApp;
